@@ -111,12 +111,19 @@
 
 //Create function to generate random values to assign to each button
 function generateOptions() {
+    
     //Variable to hold randomValues array
     var randomValues = [];
     var assignedValue;
+    
     //Generate 4 random values in the 1-12 range
     while(randomValues.length < 4) {
         assignedValue = Math.floor(Math.random() * 12) + 1;
+      
+      //Avoid duplicates
+      if (randomValues.indexOf(assignedValue) < 0) {
+          randomValues.push(assignedValue);
+      }  
 
     }
 }
