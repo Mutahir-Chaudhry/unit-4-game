@@ -103,11 +103,17 @@
  
  //Created function to generate random number and display it on document load.
  $(document).ready(function() {
+
+//Create variables for crystal buttons to the runtime of our application
+    var green = 0;
+    var pink = 0;
+    var red = 0;
+    var white = 0;
+    var isScoreOver = false;
+    var isScoreUnder = true;
+    
     var randomNumber = Math.floor((Math.random() * 120) +19);
     document.getElementById("random-number").innerHTML = randomNumber;
-
-
-});
 
 //Create function to generate random values to assign to each button
 function generateOptions() {
@@ -125,9 +131,13 @@ function generateOptions() {
           randomValues.push(assignedValue);
       }  
     }
-
-
+    var assignedValue = randomValues[Math.floor(Math.random()*4)]
+    
+    return {
+        options: randomValues
+    };
 }
+});
 
 
 
@@ -140,11 +150,7 @@ var loses
 
 
 
-// Create variables for buttons
-var greenCrystal = 0
-var pinkCrystal = 0
-var redCrystal = 0
-var whiteCrystal = 0
+
 
 //Create variables for random number generated
 var randomNumber = "";
