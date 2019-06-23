@@ -100,10 +100,21 @@
 <!-- Player Total Score -->
 
 <script type="text/javascript">
-  $(document).ready(function() {
+ 
+ //Created function to generate random number and display it on document load.
+ $(document).ready(function() {
     var randomNumber = Math.floor((Math.random() * 120) +19);
     document.getElementById("random-number").innerHTML = randomNumber;
 });
+
+//Variables created to hold number of wins and loses
+var wins
+var loses
+
+
+
+
+
 // Create variables for buttons
 var greenCrystal = 0
 var pinkCrystal = 0
