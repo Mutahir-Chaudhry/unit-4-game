@@ -48,23 +48,20 @@
                 
                 <div class="col-8">
                     <div class="card">
-                        <h3 class="card-header">Random Number!</h3>
+                        <h4 class="card-header">Random Number!</h4>
                     <div class="card-body">
-                    <h1 id="random-number"></h1>
+                    <h2 id="random-number"></h2>
                     </div>
                 </div>
             </div>
 
                 
                 <div class="col-4">
-                    <div class="text-center">
-                    <h2>Wins and Loses</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col"><div class="text-center"><h3>Wins:</h3></div></div>
-                        <br>
-                        <div class="col"><div class="text-center"><h3>Loses:</h3></div></div>
-                    </div>
+                    <div class="card">
+                        <h4 class="card-header">Wins and Loses</h4>
+                    <div class="card-body">
+                        <h4>Wins:<h2 id="wins"></h2></h4>
+                        <h4>Loses:<h2 id="loses"></h2></h4>
                     </div>
                 </div>
             </div>
@@ -103,9 +100,9 @@
             <div class="row">
                     <div class="col-8">
                             <div class="card">
-                                <h3 class="card-header">Your Score!</h3>
+                                <h4 class="card-header">Your Score!</h4>
                             <div class="card-body">
-                            <h1 id="player-score"></h1>
+                            <h2 id="player-score"></h2>
                             </div>
                         </div>
                     </div>
@@ -153,20 +150,20 @@ function generateOptions() {
 }
 });
 
-$(function() {
-    var setup = generateOptions();
+// $(function() {
+//     var setup = generateOptions();
 
-    //Assign each of the 4 values generated to each button
-    $("#green").val(setup.options[0]);
-    $("#pink").val(setup.options[2]);
-    $("#red").val(setup.options[3]);
-    $("#white").val(setup.options[4]);
+//     //Assign each of the 4 values generated to each button
+//     $("#green").val(setup.options[0]);
+//     $("#pink").val(setup.options[2]);
+//     $("#red").val(setup.options[3]);
+//     $("#white").val(setup.options[4]);
 
-    //Test to see if the buttons are generating numbers between 1-12
-    $("button.green").live("click", function() {  
-        alert(1);
-    });
-}
+//     //Test to see if the buttons are generating numbers between 1-12
+//     $("button.green").live("click", function() {  
+//         alert(1);
+//     });
+// }
 
 
 
