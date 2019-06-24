@@ -115,7 +115,7 @@
     
     var randomNumber = Math.floor((Math.random() * 120) +19);
     document.getElementById("random-number").innerHTML = randomNumber;
-
+  
 //Create function to generate random values to assign to each button
 function generateOptions() {
     
@@ -140,29 +140,24 @@ function generateOptions() {
 }
 });
 
+$(function() {
+    var setup = generateOptions();
+
+    //Assign each of the 4 values generated to each button
+    $("#green").val(setup.options[0]);
+    $("#pink").val(setup.options[2]);
+    $("#red").val(setup.options[3]);
+    $("#white").val(setup.options[4]);
+
+    
+}
 
 
 
-//Variables created to hold number of wins and loses
-var wins
-var loses
 
 
 
 
-
-
-
-//Create variables for random number generated
-var randomNumber = "";
-
-
-
-//Initiating a loop to generate 
-
-
-
-        
         </script>
     </body>
 </html>
