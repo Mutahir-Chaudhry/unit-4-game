@@ -112,6 +112,13 @@
 <script type="text/javascript">
 //CODE FOR RANDOM NUMBER GENERATOR / DISPLAY
 
+//created start game function
+function startGame() {
+    //Reseting the score to zero
+    score = 0;
+
+}
+
 $(document).ready(function() {
 //Created variables to store the the number of wins and loses and then linked them to the respective id's to be displayed in the HTML.
 var wins = 0;
@@ -160,12 +167,11 @@ $(".buttons").on("click", function(){
     realCrystalValue = parseInt(realCrystalValue);
     score += realCrystalValue;
     document.getElementById("player-score").innerHTML = score;
-    
-
-
-   
-})
-
+    //Going to now put in if statements for the conditions of the game. 
+    if (score === randomNumber)
+    alert("You win!");
+    wins ++;
+    })
 });
 
 
