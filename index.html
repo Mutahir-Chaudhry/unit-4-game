@@ -112,6 +112,9 @@
 <script type="text/javascript">
 //CODE FOR RANDOM NUMBER GENERATOR / DISPLAY
 $(document).ready(function() {
+//Created variable for the user's score
+var score = 0;
+
 //Created varaible for randomNumber to be displayed
 var randomNumber = Math.floor((Math.random()*120)+19);
 
@@ -132,6 +135,7 @@ if (randomValues.indexOf(crystalValue) < 0) {
     randomValues.push(crystalValue)
     }
 }
+//
 console.log(randomValues)
 });
         </script>
