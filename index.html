@@ -60,8 +60,8 @@
                     <div class="card">
                         <h4 class="card-header">Wins and Loses</h4>
                     <div class="card-body">
-                        <h4>Wins:<h2 id="wins"></h2></h4>
-                        <h4>Loses:<h2 id="loses"></h2></h4>
+                        <h4>Wins:<h4 id="wins"></h4></h4>
+                        <h4>Loses:<h4 id="loses"></h4></h4>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,14 @@
 <script type="text/javascript">
 //CODE FOR RANDOM NUMBER GENERATOR / DISPLAY
 $(document).ready(function() {
-//Created variable for the user's score
+//Created variables to store the the number of wins and loses and then linked them to the respective id's to be displayed in the HTML.
+var wins = 0;
+document.getElementById("wins").innerHTML = wins;
+
+var loses = 0;
+document.getElementById("loses").innerHTML = loses;
+
+//Created variable for the user's score, and linked it to the player score id in the your score card to be displayed. 
 var score = 0;
 document.getElementById("player-score").innerHTML = score;
 
