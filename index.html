@@ -111,67 +111,103 @@
 
 <script type="text/javascript">
  
- //Created function to generate random number and display it on document load.
- $(document).ready(function() {
-
-//Create variables for crystal buttons to the runtime of our application
-    var green = 0;
-    var pink = 0;
-    var red = 0;
-    var white = 0;
-    var isScoreOver = false;
-    var isScoreUnder = true;
-    var isScoreEqual = false;
-    var userScore = 0;
-    
-    var randomNumber = Math.floor((Math.random() * 120) +19);
-    document.getElementById("random-number").innerHTML = randomNumber;
-  
-//Create function to generate random values to assign to each button
-function generateOptions() {
-    
-    //Variable to hold randomValues array
-    var randomValues = [];
-    var assignedValue;
-    
-    //Generate 4 random values in the 1-12 range
-    while(randomValues.length < 4) {
-        assignedValue = Math.floor(Math.random() * 12) + 1;
-      
-      //Avoid duplicates
-      if (randomValues.indexOf(assignedValue) < 0) {
-          randomValues.push(assignedValue);
-      }  
-    }
-    var assignedValue = randomValues[Math.floor(Math.random()*4)]
-    
-    return {
-        options: randomValues
-    };
-}
-});
-
-// $(function() {
-//     var setup = generateOptions();
-
-//     //Assign each of the 4 values generated to each button
-//     $("#green").val(setup.options[0]);
-//     $("#pink").val(setup.options[2]);
-//     $("#red").val(setup.options[3]);
-//     $("#white").val(setup.options[4]);
-
-//     //Test to see if the buttons are generating numbers between 1-12
-//     $("button.green").live("click", function() {  
-//         alert(1);
-//     });
-// }
-// });
-
-
-
-
-
-
         </script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //  //Created function to generate random number and display it on document load.
+//  $(document).ready(function() {
+
+// //Create variables for crystal buttons to the runtime of our application
+//     var green = 0;
+//     var pink = 0;
+//     var red = 0;
+//     var white = 0;
+//     var isScoreOver = false;
+//     var isScoreUnder = true;
+//     var isScoreEqual = false;
+//     var userScore = 0;
+    
+    
+// //Create function to generate random values to assign to each button
+// //Scratch previous statement for now, gonna try to create for loop 
+
+// function generateOptions(){
+    
+//     //Variable to hold randomValues array
+//     var randomValues = [];
+//     //Variable to hold user score
+//     var counter;
+//     //variable to generate random number. 
+//     var randomNumber = Math.floor((Math.random() * 120) +19);
+//     document.getElementById("random-number").innerHTML = randomNumber;
+    
+//     //Generate 4 random values in the 1-12 range
+//     while(randomValues.length < 4) {
+//         counter = Math.floor(Math.random() * 12) + 1;
+      
+//       //Avoid duplicates
+//       if (randomValues.indexOf(counter) < 0) {
+//           randomValues.push(counter);
+//       }  
+//    }
+//     // var randomValues = randomValues[Math.floor(Math.random()*4)]
+    
+//     // return {
+//     //     options: randomValues
+//     // };
+// }
+
+// // $(function() {
+// //     var setup = generateOptions();
+
+// //     //Assign each of the 4 values generated to each button
+// //     $("#green").val(setup.options[0]);
+// //     $("#pink").val(setup.options[1]);
+// //     $("#red").val(setup.options[2]);
+// //     $("#white").val(setup.options[3]);
+
+// //     //Test to see if the buttons are generating numbers between 1-12
+// //     $("button.green").live("click", function() {  
+// //         alert(1);
+// //     });
+// // console.log(randomValues)
+// // });
+
+// // }
+// );
+
+
+
+
+
+
