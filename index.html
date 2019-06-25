@@ -114,6 +114,7 @@
 $(document).ready(function() {
 //Created variable for the user's score
 var score = 0;
+document.getElementById("player-score").innerHTML = score;
 
 //Created varaible for randomNumber to be displayed
 var randomNumber = Math.floor((Math.random()*120)+19);
@@ -149,7 +150,7 @@ var white = document.getElementById("white").setAttribute("data-realcrystalvalue
 $(".buttons").on("click", function(){
     var realCrystalValue = ($(this).attr("data-realcrystalvalue"));
     realCrystalValue = parseInt(realCrystalValue);
-    console.log("itworks")
+    console.log(realCrystalValue)
 })
 
 
