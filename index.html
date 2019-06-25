@@ -66,28 +66,28 @@
                 </div>
             </div>
         </div>
-
+<br>
 <!-- Crystal Buttons -->
 
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                        <button class="btn btn-default" id="green">
+                        <button class="buttons" id="green">
                                 <img src="assets/images/Green Crystal.png" width="150" height="150" alt="Green Crystal">
                               </button>
                 </div>
                 <div class="col-3">
-                        <button class="btn btn-default" id="pink">
+                        <button class="buttons" id="pink">
                                 <img src="assets/images/Pink Crystal.png" width="150" height="150" alt="Pink Crystal">
                               </button>
                 </div>
                 <div class="col-3">
-                        <button class="btn btn-default" id="red">
+                        <button class="buttons" id="red">
                                 <img src="assets/images/Red Crystal.png" width="150" height="150" alt="Red Crystal">
                               </button>
                 </div>
                 <div class="col-3">
-                        <button class="btn btn-default" id="white">
+                        <button class="buttons" id="white">
                                 <img src="assets/images/White Crystal.png" width="150" height="150" alt="White Crystal">
                               </button>
                 </div>
@@ -108,7 +108,7 @@
                     </div>
             </div>
         </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 //CODE FOR RANDOM NUMBER GENERATOR / DISPLAY
 $(document).ready(function() {
@@ -144,24 +144,33 @@ var red = document.getElementById("red").setAttribute("data-realcrystalvalue", r
 
 var white = document.getElementById("white").setAttribute("data-realcrystalvalue", randomValues[3]);
 
-//Going to create the on click function for each button
+//Went back and changed the default button class in bootstrap.. too easy. Been stuck on this for hours.. Now creating the on click funciton. and tested to see if it was working. 
 
-$("#green").on("click", function(){
-    console.log("hi")
+$(".buttons").on("click", function(){
+    var realCrystalValue = ($(this).attr("data-realcrystalvalue"));
+    realCrystalValue = parseInt(realCrystalValue);
+    console.log("itworks")
 })
 
 
 
 console.log(randomValues)
-console.log(green)
-console.log(pink)
-console.log(red)
-console.log(white)
+
 });
         </script>
     </body>
 </html>
 
+
+
+
+
+<!-- //Adding class to each varaible in order to reference each button in the on click function. 
+// green.addClass("crystal-image")
+// pink.addClass("crystal-image")
+// red.addClass("crystal-image")
+// white.addClass("crystal-image")
+//Going to create the on click function for each button -->
 
 <!-- //Created variable for each button, and set each variable to create an image of the respective crystal. Took away the links in the buttons, but will reference each button and append with the id of that button.
 //Decided to leave button links for images, and take away the id reference for each varaible because it was being done incorrectly. //Was going to create for loop, but since each image and crystal are different, I will assign each individual variable its on individual index. No need to assign class to each variable, since the id for each one is attached to the already existing default bootstrap button class btn btn-default.
@@ -174,8 +183,6 @@ console.log(white)
 // $("#pink").attr("data-main", randomValues[1]);
 // $("#red").attr("data-main", randomValues[2]);
 // $("#white").attr("data-main", randomValues[3]);-->
-
-
  <!-- //  //Created function to generate random number and display it on document load.
 //  $(document).ready(function() {
 
