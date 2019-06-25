@@ -135,8 +135,7 @@ if (randomValues.indexOf(crystalValue) < 0) {
     randomValues.push(crystalValue)
     }
 }
-//Created variable for each button, and set each variable to create an image of the respective crystal. Took away the links in the buttons, but will reference each button and append with the id of that button.
-//Decided to leave button links for images, and take away the id reference for each varaible because it was being done incorrectly. 
+//Decided to consolidate the value assignment by calling each ID for each varaible and the setting the data attribute to the respective index position. 
 var green = document.getElementById("green").setAttribute("data-realcrystalvalue", randomValues[0]);
 
 var pink = document.getElementById("pink").setAttribute("data-realcrystalvalue", randomValues[1]);
@@ -144,17 +143,12 @@ var pink = document.getElementById("pink").setAttribute("data-realcrystalvalue",
 var red = document.getElementById("red").setAttribute("data-realcrystalvalue", randomValues[2]);
 
 var white = document.getElementById("white").setAttribute("data-realcrystalvalue", randomValues[3]);
-//Was going to create for loop, but since each image and crystal are different, I will assign each individual variable its on individual index. No need to assign class to each variable, since the id for each one is attached to the already existing default bootstrap button class btn btn-default.
-// green.attr("data-realcrystalworth", randomValues[0]);
-// pink.attr("data-realcrystalworth", randomValues[1]);
-// red.attr("data-realcrystalworth", randomValues[2]);
-// white.attr("data-realcrystalworth", randomValues[3]);
-//Going to now add each crystal variable and all its attributes to the respective id in each button.
-// $("#green").attr("data-main", randomValues[0]);
-// $("#pink").attr("data-main", randomValues[1]);
-// $("#red").attr("data-main", randomValues[2]);
-// $("#white").attr("data-main", randomValues[3]);
 
+//Going to create the on click function for each button
+
+$("#green").on("click", function(){
+    console.log("hi")
+})
 
 
 
@@ -169,32 +163,17 @@ console.log(white)
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- //Created variable for each button, and set each variable to create an image of the respective crystal. Took away the links in the buttons, but will reference each button and append with the id of that button.
+//Decided to leave button links for images, and take away the id reference for each varaible because it was being done incorrectly. //Was going to create for loop, but since each image and crystal are different, I will assign each individual variable its on individual index. No need to assign class to each variable, since the id for each one is attached to the already existing default bootstrap button class btn btn-default.
+// green.attr("data-realcrystalworth", randomValues[0]);
+// pink.attr("data-realcrystalworth", randomValues[1]);
+// red.attr("data-realcrystalworth", randomValues[2]);
+// white.attr("data-realcrystalworth", randomValues[3]);
+//Going to now add each crystal variable and all its attributes to the respective id in each button.
+// $("#green").attr("data-main", randomValues[0]);
+// $("#pink").attr("data-main", randomValues[1]);
+// $("#red").attr("data-main", randomValues[2]);
+// $("#white").attr("data-main", randomValues[3]);-->
 
 
  <!-- //  //Created function to generate random number and display it on document load.
