@@ -166,7 +166,14 @@ $(".buttons").on("click", function(){
     wins ++;
     document.getElementById("wins").innerHTML = wins;
     startGame();
-    }})
+    }
+    else if(score > randomNumber){
+    alert("You Lose!");
+    loses ++;
+    document.getElementById("loses").innerHTML = loses;
+    startGame();
+    }
+    })
 });
 
 //created start game function
