@@ -137,19 +137,32 @@ if (randomValues.indexOf(crystalValue) < 0) {
 }
 //Created variable for each button, and set each variable to create an image of the respective crystal. Took away the links in the buttons, but will reference each button and append with the id of that button.
 //Decided to leave button links for images, and take away the id reference for each varaible because it was being done incorrectly. 
-    var green;
-    var pink;
-    var red;
-    var white;
+var green = document.getElementById("green").setAttribute("data-realcrystalvalue", randomValues[0]);
+
+var pink = document.getElementById("pink").setAttribute("data-realcrystalvalue", randomValues[1]);
+
+var red = document.getElementById("red").setAttribute("data-realcrystalvalue", randomValues[2]);
+
+var white = document.getElementById("white").setAttribute("data-realcrystalvalue", randomValues[3]);
 //Was going to create for loop, but since each image and crystal are different, I will assign each individual variable its on individual index. No need to assign class to each variable, since the id for each one is attached to the already existing default bootstrap button class btn btn-default.
-green.attr("data-crystalValue", randomValues[0]);
-pink.attr("data-crystalValue", randomValues[1]);
-red.attr("data-crystalValue", randomValues[2]);
-white.attr("data-crystalValue", randomValues[3]);
-//Going to now add each crystal variable to and all its attributes to the respective id 
+// green.attr("data-realcrystalworth", randomValues[0]);
+// pink.attr("data-realcrystalworth", randomValues[1]);
+// red.attr("data-realcrystalworth", randomValues[2]);
+// white.attr("data-realcrystalworth", randomValues[3]);
+//Going to now add each crystal variable and all its attributes to the respective id in each button.
+// $("#green").attr("data-main", randomValues[0]);
+// $("#pink").attr("data-main", randomValues[1]);
+// $("#red").attr("data-main", randomValues[2]);
+// $("#white").attr("data-main", randomValues[3]);
+
+
 
 
 console.log(randomValues)
+console.log(green)
+console.log(pink)
+console.log(red)
+console.log(white)
 });
         </script>
     </body>
