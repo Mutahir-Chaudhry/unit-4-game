@@ -116,6 +116,7 @@
 function startGame() {
     //Reseting the score to zero
     score = 0;
+    //
 
 }
 
@@ -174,7 +175,13 @@ $(".buttons").on("click", function(){
     })
 });
 
-
+//created start game function
+function startGame() {
+    //Reseting the score to zero
+    score = 0;
+    //Reseting random number
+    randomNumber = Math.floor((Math.random()*120)+19);
+}
 
 
         </script>
