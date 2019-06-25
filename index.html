@@ -111,6 +111,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 //CODE FOR RANDOM NUMBER GENERATOR / DISPLAY
+
 $(document).ready(function() {
 //Created variables to store the the number of wins and loses and then linked them to the respective id's to be displayed in the HTML.
 var wins = 0;
@@ -121,7 +122,7 @@ document.getElementById("loses").innerHTML = loses;
 
 //Created variable for the user's score, and linked it to the player score id in the your score card to be displayed. 
 var score = 0;
-document.getElementById("player-score").innerHTML = score;
+// document.getElementById("player-score").innerHTML = score;
 
 //Created varaible for randomNumber to be displayed
 var randomNumber = Math.floor((Math.random()*120)+19);
@@ -157,14 +158,19 @@ var white = document.getElementById("white").setAttribute("data-realcrystalvalue
 $(".buttons").on("click", function(){
     var realCrystalValue = ($(this).attr("data-realcrystalvalue"));
     realCrystalValue = parseInt(realCrystalValue);
-    console.log(realCrystalValue)
+    score += realCrystalValue;
+    document.getElementById("player-score").innerHTML = score;
+    
+
+
+   
 })
 
-
-
-console.log(randomValues)
-
 });
+
+
+
+
         </script>
     </body>
 </html>
