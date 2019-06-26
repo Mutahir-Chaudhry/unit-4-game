@@ -165,12 +165,14 @@ $(".buttons").on("click", function(){
     alert("You win!");
     wins ++;
     document.getElementById("wins").innerHTML = wins;
+    score = 0;
     startGame();
     }
     else if(score > randomNumber){
     alert("You Lose!");
     loses ++;
     document.getElementById("loses").innerHTML = loses;
+    score = 0;
     startGame();
     }
     })
